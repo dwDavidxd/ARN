@@ -50,10 +50,6 @@ def main(args):
     acc_adv = 0
     data_number = 0
 
-    label_true = []
-    label_cln = []
-    label_adv = []
-
     for cln_data, true_label in loader:
         data_number = data_number + cln_data.size(0)
         # True label
@@ -93,13 +89,6 @@ def main(args):
         pred_cln = predict_from_logits(model(cln_data))
         # Predict adversarial examples
         pred_adv = predict_from_logits(model(adv))
-
-        # clean----------------------------------------------------
-        for x in pred_cln:
-            label_cln.append(x.item())
-
-        for x in pred_adv:
-            label_adv.append(x.item())
 
         num0 = 0
         num1 = 0
