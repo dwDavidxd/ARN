@@ -108,18 +108,19 @@ def main(args):
 
         print('Craft ' + str(cnt) + ' adversarial examples-------------')
 
+        # Save adversarial examples 
         for n in range(batch_size):
             cnt += 1
 
-            # Save adversarial examples (.npy)
             img = bchw2bhwc(adv[n].detach().cpu().numpy())
 
+            # (.npy)
             name = str(cnt) + '.npy'
             path = os.path.join(path_adv, name)
             np.save(path, img)
 
             '''
-            # Save images (.npy)
+            # (.png)
             name = str(cnt) + '.png'
             path = os.path.join(path_adv, name)
             cv2.imwrite(path, img*255, [int(cv2.IMWRITE_JPEG_QUALITY), 100])
