@@ -1,5 +1,3 @@
-The code for MNIST.
-
 ## How to generate adversarial data for training or testing the networks?
 Run "craft_adversarial_examples.py".
 
