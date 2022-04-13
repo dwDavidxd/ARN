@@ -9,4 +9,4 @@ The is the code for "[Towards Defending against Adversarial Examples via Attack-
 * numpy
 
 ## Using this pre-processing based adversarial defense.
-* See the "readme" in "MNIST" folder.
+* See the "README" in "MNIST" folder.
