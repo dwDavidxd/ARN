@@ -1,6 +1,6 @@
 # ARN
 
-The is the code for "removing adversarial noise in class activation feature space".
+The is the code for "Towards Defending against Adversarial Examples via Attack-Invariant Features(https://proceedings.mlr.press/v139/zhou21e.html)".
 
 ## Prerequisites
 * Python (3.7.4)
@@ -8,5 +8,5 @@ The is the code for "removing adversarial noise in class activation feature spac
 * CUDA
 * numpy
 
-## Training the denoising network
+## Using this pre-processing based adversarial defense.
 * See the "readme" in "MNIST" folder.
