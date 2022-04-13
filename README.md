@@ -8,3 +8,5 @@ The is the code for "removing adversarial noise in class activation feature spac
 * CUDA
 * numpy
 
+## Training the denoising network
+* See the "readme" in "MNIST" folder.
