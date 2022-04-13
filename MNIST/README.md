@@ -10,9 +10,9 @@ The generated samples can be saved with ".png" and ".npy" format. The storage di
 ## How to train the "Adversarial noise Removing Network"?
 Run "train_ARN.py"
 
-See './config/adver.yaml' for network configurations and data selection.
+See "./config/adver.yaml" for network configurations and data selection.
 
 ## How to test the "Adversarial noise Removing Network"?
 Run "test_ARN.py"
 
-See './config/adver.yaml' for network configurations and data selection.
+See "./config/adver.yaml" for network configurations and data selection.
