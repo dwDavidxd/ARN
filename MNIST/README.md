@@ -12,7 +12,7 @@ See "./config/adver.yaml" for network configurations and data selection.
 
 The training data includes natural data and two types of adversarial data.
 
-## How to test the "Adversarial noise Removing Network"?
+## How to test the ARN?
 Run "test_ARN.py"
 
 See "./config/adver.yaml" for network configurations and data selection.
