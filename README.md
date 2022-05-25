@@ -11,4 +11,5 @@ The is the code for "[Towards Defending against Adversarial Examples via Attack-
 ## Using this pre-processing based adversarial defense.
 * See the "README" in "MNIST" folder.
 
-
+## Note
+If you have any questions, please contact me.  Email:  dwzhou.xidian@gmail.com
