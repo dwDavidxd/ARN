@@ -57,7 +57,7 @@ The training data includes natural data and two types of adversarial data.
 
 
 ### Test
-- To test the ARN
+To test the ARN
 
 ```
 python test_ARN.py
