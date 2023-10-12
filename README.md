@@ -1,3 +1,33 @@
+<div align="center">   
+  
+# Towards Defending against Adversarial Examples via Attack-Invariant Features
+[![Paper](https://img.shields.io/badge/paper-ICML-green)](http://proceedings.mlr.press/v139/zhou21e/zhou21e.pdf)
+
+</div>
+
+The implementation of [Towards Defending against Adversarial Examples via Attack-Invariant Features](http://proceedings.mlr.press/v139/zhou21e/zhou21e.pdf) (ICML 2021).
+
+Deep neural networks (DNNs) are vulnerable to adversarial noise. Their adversarial robustness can be improved by exploiting adversarial examples. However, given the continuously evolving attacks, models trained on seen types of adversarial examples generally cannot generalize well to unseen types of adversarial examples. To solve this problem, in this paper, we propose to remove adversarial noise by learning generalizable invariant features across attacks which maintain semantic classification information. Specifically, we introduce an adversarial feature learning mechanism to disentangle invariant features from adversarial noise. A normalization term has been proposed in the encoded space of the attack-invariant features to address the bias issue between the seen and unseen types of attacks. Empirical evaluations demonstrate that our method could provide better protection in comparison to previous state-of-theart approaches, especially against unseen types of attacks and adaptive attacks
+
+
+<p float="left" align="center">
+<img src="arch.png" width="400" /> 
+<figcaption align="center">
+  
+A visual illustration of the natural example ($x$), adversarial example ($\tilde{x}$), latent feature ($\mathcal{F}(\cdot)$) and attack-specific feature ($\Delta(\mathcal{F},\tilde{x},x)=[\mathcal{F}(\tilde{x})\text{ - }\mathcal{F}(x)]\times10^{4}$). The latent feature is extracted from the first ReLu layer of the ResNet-110 model \citep{he2016deep}. Distinct types of attacks (e.g., PGD, AA and STA) generally only modify tiny information and their adversarial examples sufficiently retain invariant features from the natural example.
+</figcaption>
+</p>
+
+
+<p float="left" align="center">
+<img src="method.png" width="800" /> 
+<figcaption align="center">
+A visual illustration of our Adversarial noise Removing Network (ARN). Our main idea is to restore natural examples by exploiting invariant features. ARN is composed of an encoder network and a decoder network. The encoder network learns Attack-Invariant Features (AIF) via an adversarial feature learning mechanism and a normalization term. The decoder is trained to restore natural examples from AIF via a pixel similarity metric and an image discriminator.
+</figcaption>
+</p>
+
+
+
 ## How to generate adversarial data for training or testing the networks?
 Run "craft_adversarial_examples.py".
 
