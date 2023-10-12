@@ -27,24 +27,63 @@ A visual illustration of our Adversarial noise Removing Network (ARN). Our main 
 </p>
 
 
+## Requirements
+- This codebase is written for `python3` and `pytorch`.
+- To install necessary python packages, run `pip install -r requirements.txt`.
 
-## How to generate adversarial data for training or testing the networks?
-Run "craft_adversarial_examples.py".
+
+## Experiments
+### Training
+- To generate adversarial data for training or testing the model
+
+```
+python craft_adversarial_examples.py
+```
 
 We use the "[advertorch](https://github.com/BorealisAI/advertorch)" toolbox to help generate adversairal samples. This code provides ![](http://latex.codecogs.com/svg.latex?L_{\infty}) PGD, ![](http://latex.codecogs.com/svg.latex?L_{2}) CW, [DDN](https://arxiv.org/abs/1811.09600) and [STA](https://openreview.net/forum?id=HyydRMZC-), etc., to generate different adversarial samples.
 
 The generated samples can be saved with ".png" and ".npy" format. The storage directory defaults to "adv_example".
 
-## How to train the "Adversarial noise Removing Network"?
-Run "train_ARN.py"
 
-See "./config/adver.yaml" for network configurations and data selection. 
+- To train the "Adversarial noise Removing Network (ARN)"?
+
+```
+python train_ARN.py
+```
+
+See './config/adver.yaml' for network configurations and data selection. 
 
 The training data includes natural data and two types of adversarial data.
 
-## How to test the ARN?
-Run "test_ARN.py"
 
-See "./config/adver.yaml" for network configurations and data selection.
+### Test
+- To test the ARN
+
+```
+python test_ARN.py
+```
+
+See './config/adver.yaml' for network configurations and data selection.
 
 Input the natural or adversairal data into the ARN and obtain the processed data. Then, input the processed data into the target model.
+
+
+## License and Contributing
+- This README is formatted based on [paperswithcode](https://github.com/paperswithcode/releasing-research-code).
+- Feel free to post issues via Github. 
+
+
+## Reference
+If you find the code useful in your research, please consider citing our paper:
+
+
+<pre>
+@inproceedings{zhou2021towards,
+  title={Towards defending against adversarial examples via attack-invariant features},
+  author={Zhou, Dawei and Liu, Tongliang and Han, Bo and Wang, Nannan and Peng, Chunlei and Gao, Xinbo},
+  booktitle={International Conference on Machine Learning},
+  pages={12835--12845},
+  year={2021},
+  organization={PMLR}
+}
+</pre>
